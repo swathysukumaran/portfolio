@@ -4,7 +4,7 @@ function Intro() {
   return (
     <div className="h-[80vh] bg-primary flex flex-col items-start justify-center gap-8 py-10">
       <h1 className="text-white">Hi, I am</h1>
-      <h1 className="text-6xl text-secondary font-semibold">
+      <h1 className="text-6xl sm:text-3xl text-secondary font-semibold">
         Swathy Sukumaran Vadakkath
       </h1>
       <h1 className="text-5xl text-white font-semibold">

@@ -15,15 +15,15 @@ function About() {
   return (
     <div>
       <SectionTitle title="About" />
-      <div className="flex w-full items-center gap-5">
-        <div className="h-[70vh] w-1/2 overflow-hidden">
+      <div className="flex sm:flex-col w-full items-center gap-5">
+        <div className="h-[70vh] w-1/2 sm:w-full overflow-hidden">
           <img
             src={profilePic}
             alt="A lady with laptop"
             className="h-full w-full object-top"
           />
         </div>
-        <div className="flex flex-col gap-5 w-1/2">
+        <div className="flex flex-col gap-5 w-1/2 sm:w-full">
           <p className="text-white">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
             commodi eos libero iusto fugit eaque blanditiis dolorum praesentium
