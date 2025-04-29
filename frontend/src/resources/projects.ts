@@ -5,6 +5,7 @@ export const projects = [
     description:
       "An AI-powered travel planning app that generates personalized itineraries and allows collaborative trip editing.",
     link: "https://tempoaitravelplanner.netlify.app/",
+    caseStudyPath: "/case-studies/tempo",
   },
   {
     name: "Food Order System",

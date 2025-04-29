@@ -49,9 +49,17 @@ function Projects() {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-400 underline hover:text-blue-300"
+              className="text-sm text-secondary underline hover:text-blue-300"
             >
               View Project
+            </a>
+          )}
+          {selectedProject.caseStudyPath && (
+            <a
+              href={selectedProject.caseStudyPath}
+              className="text-sm text-tertiary underline hover:text-yellow-300"
+            >
+              Read Full Case Study
             </a>
           )}
         </div>
