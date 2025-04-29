@@ -4,6 +4,7 @@ import { projects } from "../../resources/projects";
 
 function Projects() {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const selectedProject = projects[selectedProjectIndex];
 
   return (
     <section className="w-full px-4 py-10 sm:px-6 md:px-10">
@@ -29,18 +30,23 @@ function Projects() {
 
         {/* Project Details */}
         <div className="flex flex-col gap-4 md:pl-6">
+          <img
+            src={selectedProject.image}
+            alt={selectedProject.name}
+            className="w-full max-h-60 object-cover rounded-lg shadow-md"
+          />
           <h2 className="text-secondary text-xl sm:text-2xl font-semibold">
-            {projects[selectedProjectIndex].name}
+            {selectedProject.name}
           </h2>
           <h3 className="text-tertiary text-lg sm:text-xl font-medium">
-            Tech Stack: {projects[selectedProjectIndex].tech.join(", ")}
+            Tech Stack: {selectedProject.tech.join(", ")}
           </h3>
           <p className="text-white text-sm sm:text-base leading-relaxed">
-            {projects[selectedProjectIndex].description}
+            {selectedProject.description}
           </p>
-          {projects[selectedProjectIndex].link && (
+          {selectedProject.link && (
             <a
-              href={projects[selectedProjectIndex].link}
+              href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-blue-400 underline hover:text-blue-300"
