@@ -4,7 +4,7 @@ import { projects } from "../../resources/projects";
 
 function Projects() {
   return (
-    <section className="w-full px-4 py-10 sm:px-6 md:px-10">
+    <section className="w-full px-4 py-10 sm:px-6 md:px-10" id="projects">
       <SectionTitle title="Projects" />
 
       <div className="grid gap-8 mt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

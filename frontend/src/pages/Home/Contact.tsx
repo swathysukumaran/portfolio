@@ -21,7 +21,10 @@ function Contact() {
   };
 
   return (
-    <section className="w-full px-4 py-10 sm:px-6 md:px-10 max-w-2xl mx-auto">
+    <section
+      className="w-full px-4 py-10 sm:px-6 md:px-10 max-w-2xl mx-auto"
+      id="contact"
+    >
       <SectionTitle title="Contact Me" />
 
       <form
