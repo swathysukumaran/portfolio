@@ -1,68 +1,61 @@
-import React, { useState } from "react";
+import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
 
 function Projects() {
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const selectedProject = projects[selectedProjectIndex];
-
   return (
     <section className="w-full px-4 py-10 sm:px-6 md:px-10">
       <SectionTitle title="Projects" />
 
-      <div className="flex flex-col md:flex-row gap-8 mt-6">
-        {/* Project Selector */}
-        <div className="flex md:flex-col gap-4 border-l-2 border-[#135e4c82]">
-          {projects.map((project, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedProjectIndex(index)}
-              className={`text-left text-base sm:text-lg md:text-xl p-4 transition-all duration-200 focus:outline-none ${
-                selectedProjectIndex === index
-                  ? "text-tertiary border-tertiary border-l-4 bg-[#135e4d33] -ml-[2px]"
-                  : "text-white hover:text-tertiary"
-              }`}
-            >
-              {project.name}
-            </button>
-          ))}
-        </div>
+      <div className="grid gap-8 mt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-[#1a1a1a] p-5 rounded-lg shadow-md hover:shadow-xl transition group flex flex-col"
+          >
+            <div className="h-48 w-full overflow-hidden rounded-md mb-4">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-        {/* Project Details */}
-        <div className="flex flex-col gap-4 md:pl-6">
-          <img
-            src={selectedProject.image}
-            alt={selectedProject.name}
-            className="w-full max-h-60 object-cover rounded-lg shadow-md"
-          />
-          <h2 className="text-secondary text-xl sm:text-2xl font-semibold">
-            {selectedProject.name}
-          </h2>
-          <h3 className="text-tertiary text-lg sm:text-xl font-medium">
-            Tech Stack: {selectedProject.tech.join(", ")}
-          </h3>
-          <p className="text-white text-sm sm:text-base leading-relaxed">
-            {selectedProject.description}
-          </p>
-          {selectedProject.link && (
-            <a
-              href={selectedProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-secondary underline hover:text-blue-300"
-            >
-              View Project
-            </a>
-          )}
-          {selectedProject.caseStudyPath && (
-            <a
-              href={selectedProject.caseStudyPath}
-              className="text-sm text-tertiary underline hover:text-yellow-300"
-            >
-              Read Full Case Study
-            </a>
-          )}
-        </div>
+            <h2 className="text-secondary text-xl font-semibold mb-1">
+              {project.name}
+            </h2>
+
+            <p className="text-white text-sm leading-relaxed flex-grow">
+              {project.description}
+            </p>
+
+            <div className="mt-4">
+              <p className="text-xs text-gray-400 mb-2 italic">
+                Tech Stack: {project.tech.join(", ")}
+              </p>
+
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-400 underline hover:text-blue-300 block"
+                >
+                  View Live
+                </a>
+              )}
+
+              {project.caseStudyPath && (
+                <a
+                  href={project.caseStudyPath}
+                  className="text-sm text-yellow-400 underline hover:text-yellow-300 block"
+                >
+                  Read Case Study
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
