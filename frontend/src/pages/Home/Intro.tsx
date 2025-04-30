@@ -1,28 +1,41 @@
 import React from "react";
+import profilePic from "../../assets/profile.jpeg"; // or a dev-themed illustration
 
 function Intro() {
   return (
-    <section className="min-h-screen bg-primary flex flex-col items-start justify-center gap-6 px-4 sm:px-10 py-16">
-      <h1 className="text-white text-xl sm:text-2xl">Hi, I am</h1>
+    <section className="bg-primary px-4 sm:px-6 md:px-10 py-20 min-h-screen flex flex-col-reverse md:flex-row items-center gap-10">
+      {/* Text Content */}
+      <div className="md:w-1/2 text-left flex flex-col gap-6">
+        <p className="text-tertiary text-lg sm:text-xl font-medium">Hi, I’m</p>
+        <h1 className="text-secondary text-4xl sm:text-5xl font-bold leading-tight">
+          Swathy Sukumaran Vadakkath
+        </h1>
+        <h2 className="text-white text-2xl sm:text-3xl font-semibold">
+          I craft modern, meaningful web experiences.
+        </h2>
+        <p className="text-white text-sm sm:text-base leading-relaxed max-w-md">
+          A full-stack developer with a passion for turning ideas into
+          accessible and efficient digital solutions. My work blends
+          functionality, clarity, and a love for well-crafted UI.
+        </p>
+        <div>
+          <a
+            href="#projects"
+            className="inline-block mt-4 bg-tertiary text-primary font-bold px-6 py-3 rounded hover:bg-opacity-90 transition"
+          >
+            See My Work
+          </a>
+        </div>
+      </div>
 
-      <h2 className="text-4xl sm:text-6xl text-secondary font-bold">
-        Swathy Sukumaran Vadakkath
-      </h2>
-
-      <h3 className="text-2xl sm:text-4xl text-white font-semibold">
-        I build things for the Web
-      </h3>
-
-      <p className="text-white max-w-xl text-sm sm:text-base leading-relaxed">
-        I'm a full-stack web developer passionate about crafting responsive,
-        accessible, and user-friendly applications. With a strong foundation in
-        the MERN stack and a love for thoughtful UI, I bring ideas to life on
-        the browser.
-      </p>
-
-      <button className="mt-4 border-2 border-tertiary text-tertiary px-8 py-3 rounded hover:bg-tertiary hover:text-white transition">
-        View My Work
-      </button>
+      {/* Image / Illustration */}
+      <div className="md:w-1/2 w-full max-w-sm">
+        <img
+          src={profilePic}
+          alt="Swathy working on laptop"
+          className="w-full h-auto rounded-xl shadow-lg object-cover"
+        />
+      </div>
     </section>
   );
 }
