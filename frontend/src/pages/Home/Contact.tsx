@@ -16,19 +16,17 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, just log to console
     console.log("Message submitted:", formData);
-
-    // Later: POST to /api/contact
-    // await axios.post("/api/contact", formData);
+    // TODO: connect to backend endpoint (e.g. /api/contact)
   };
 
   return (
-    <section className="w-full px-4 py-10 sm:px-6 md:px-10 max-w-3xl mx-auto">
+    <section className="w-full px-4 py-10 sm:px-6 md:px-10 max-w-2xl mx-auto">
       <SectionTitle title="Contact Me" />
+
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-6 mt-6 p-6 rounded-lg "
+        className="flex flex-col gap-6 mt-8 bg-[#1a1a1a] p-6 rounded-lg shadow-md"
       >
         <input
           type="text"
@@ -39,6 +37,7 @@ function Contact() {
           onChange={handleChange}
           className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
+
         <input
           type="email"
           name="email"
@@ -48,6 +47,7 @@ function Contact() {
           onChange={handleChange}
           className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
+
         <textarea
           name="message"
           placeholder="Your Message"
@@ -57,6 +57,7 @@ function Contact() {
           onChange={handleChange}
           className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
+
         <button
           type="submit"
           className="bg-tertiary hover:bg-opacity-80 text-white py-3 rounded-md font-semibold transition duration-300"
