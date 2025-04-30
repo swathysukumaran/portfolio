@@ -2,24 +2,28 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="h-[80vh] bg-primary flex flex-col items-start justify-center gap-8 py-10">
-      <h1 className="text-white">Hi, I am</h1>
-      <h1 className="text-6xl sm:text-3xl text-secondary font-semibold">
+    <section className="min-h-screen bg-primary flex flex-col items-start justify-center gap-6 px-4 sm:px-10 py-16">
+      <h1 className="text-white text-xl sm:text-2xl">Hi, I am</h1>
+
+      <h2 className="text-4xl sm:text-6xl text-secondary font-bold">
         Swathy Sukumaran Vadakkath
-      </h1>
-      <h1 className="text-5xl text-white font-semibold">
+      </h2>
+
+      <h3 className="text-2xl sm:text-4xl text-white font-semibold">
         I build things for the Web
-      </h1>
-      <p className="text-white w-2/3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem ipsum,
-        magnam distinctio voluptate laborum quod tempore eius, possimus dolorum
-        qui ullam debitis aperiam reiciendis, fugiat adipisci? Libero, laborum
-        veniam.
+      </h3>
+
+      <p className="text-white max-w-xl text-sm sm:text-base leading-relaxed">
+        I'm a full-stack web developer passionate about crafting responsive,
+        accessible, and user-friendly applications. With a strong foundation in
+        the MERN stack and a love for thoughtful UI, I bring ideas to life on
+        the browser.
       </p>
-      <button className="border-2 border-tertiary text-tertiary px-10 py-3 rounded">
-        Get Started
+
+      <button className="mt-4 border-2 border-tertiary text-tertiary px-8 py-3 rounded hover:bg-tertiary hover:text-white transition">
+        View My Work
       </button>
-    </div>
+    </section>
   );
 }
 
