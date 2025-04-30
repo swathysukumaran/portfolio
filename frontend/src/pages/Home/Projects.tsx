@@ -11,7 +11,7 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-[#1a1a1a] p-5 rounded-lg shadow-md hover:shadow-xl transition group flex flex-col"
+            className="bg-surface p-5 rounded-lg shadow-md hover:shadow-xl transition group flex flex-col"
           >
             <div className="h-48 w-full overflow-hidden rounded-md mb-4">
               <img

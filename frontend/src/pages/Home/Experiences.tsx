@@ -14,7 +14,7 @@ function Experiences() {
             <span className="absolute -left-3 top-2 w-4 h-4 bg-tertiary rounded-full shadow-md"></span>
 
             {/* Card Content */}
-            <div className="bg-[#1a1a1a] p-5 rounded-lg shadow-md hover:shadow-xl transition">
+            <div className="bg-surface p-5 rounded-lg shadow-md hover:shadow-xl transition">
               <h3 className="text-xl text-secondary font-semibold">
                 {exp.role}
               </h3>

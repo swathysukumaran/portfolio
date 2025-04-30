@@ -26,7 +26,7 @@ function Contact() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-6 mt-8 bg-[#1a1a1a] p-6 rounded-lg shadow-md"
+        className="flex flex-col gap-6 mt-8 bg-surface p-6 rounded-lg shadow-md"
       >
         <input
           type="text"
