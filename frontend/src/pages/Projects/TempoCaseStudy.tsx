@@ -8,14 +8,14 @@ export default function TempoCaseStudy() {
         <h1 className="text-4xl md:text-5xl font-bold text-tertiary">
           🌍 Tempo – A Travel Planner That Understands You
         </h1>
+      </section>
+
+      {/* Introduction */}
+      <section className="mb-10 max-w-3xl space-y-4 ">
         <p className="mt-4 text-lg text-secondary max-w-2xl">
           Tempo began with one simple idea: everyone travels differently — even
           to the same place, on the same dates.
         </p>
-      </section>
-
-      {/* Introduction */}
-      <section className="mb-10 max-w-3xl space-y-4">
         <p>
           Some people travel to relax. Others to explore. Some are with their
           kids, some on solo adventures, and others are attending weddings or
@@ -31,6 +31,44 @@ export default function TempoCaseStudy() {
           something that didn’t just give you a list of tourist spots, but
           actually listened to what you wanted.
         </p>
+      </section>
+      {/* Screenshots */}
+      <section className="mb-12 max-w-6xl">
+        <h2 className="text-2xl font-semibold text-tertiary mb-4">
+          📸 Screenshots
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <img
+            src="/images/tempo-1.png"
+            alt="Trip Input"
+            className="rounded-xl shadow-lg"
+          />
+          <img
+            src="/images/tempo-2.png"
+            alt="Generated Itinerary"
+            className="rounded-xl shadow-lg"
+          />
+          <img
+            src="/images/tempo-3.png"
+            alt="Hotel Suggestions"
+            className="rounded-xl shadow-lg"
+          />
+          <img
+            src="/images/tempo-4.png"
+            alt="Map Integration"
+            className="rounded-xl shadow-lg"
+          />
+          <img
+            src="/images/tempo-5.png"
+            alt="Share Feature"
+            className="rounded-xl shadow-lg"
+          />
+          <img
+            src="/images/tempo-6.png"
+            alt="Edit Trip View"
+            className="rounded-xl shadow-lg"
+          />
+        </div>
       </section>
 
       {/* From Forms to Freedom */}
