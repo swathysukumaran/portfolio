@@ -47,7 +47,7 @@ function Projects() {
 
               {project.caseStudyPath && (
                 <a
-                  href="/projects/tempo"
+                  href={project.caseStudyPath}
                   className="text-sm text-yellow-400 underline hover:text-yellow-300 block"
                 >
                   Read Case Study
