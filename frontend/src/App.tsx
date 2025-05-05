@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import TempoCaseStudy from "./pages/Projects/TempoCaseStudy";
 import BrightFuturesCaseStudy from "./pages/Projects/BrightFuturesCaseStudy";
+import HRMCCaseStudy from "./pages/Projects/HRMCCaseStudy";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           path="/projects/brightfutures"
           element={<BrightFuturesCaseStudy />}
         />
+        <Route path="/projects/hrmc" element={<HRMCCaseStudy />} />
       </Routes>
     </BrowserRouter>
   );
