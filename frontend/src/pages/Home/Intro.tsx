@@ -1,43 +1,47 @@
 import React from "react";
-import profilePic from "../../assets/profile.jpeg"; // or a dev-themed illustration
+import profilePic from "../../assets/profile.jpeg"; // replace with actual image
 
-function Intro() {
+export default function Intro() {
   return (
-    <section className="bg-primary px-4 sm:px-6 md:px-10 py-20 min-h-screen flex flex-col-reverse md:flex-row items-center gap-10">
-      {/* Text Content */}
-      <div className="md:w-1/2 text-left flex flex-col gap-6">
-        <p className="text-tertiary text-lg sm:text-xl font-medium">Hi, I’m</p>
-        <h1 className="text-secondary text-4xl sm:text-5xl font-bold leading-tight">
-          Swathy Sukumaran Vadakkath
-        </h1>
-        <h2 className=" text-2xl sm:text-3xl font-semibold">
-          I craft modern, meaningful web experiences.
-        </h2>
-        <p className=" text-sm sm:text-base leading-relaxed max-w-md">
-          A full-stack developer with a passion for turning ideas into
-          accessible and efficient digital solutions. My work blends
-          functionality, clarity, and a love for well-crafted UI.
-        </p>
-        <div>
+    <section className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary">
+      <span className="text-sm tracking-wider uppercase text-tertiary">
+        Building with care & clarity
+      </span>
+
+      <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+        {/* Text Block */}
+        <div className="flex-1">
+          <h1 className="text-4xl md:text-5xl font-semibold leading-snug tracking-tight max-w-3xl">
+            Hello, I’m Swathy —
+            <br />
+            a full-stack developer who believes
+            <br className="hidden md:block" />
+            great software should feel simple.
+          </h1>
+
+          <p className="text-lg leading-relaxed mt-4 max-w-2xl">
+            I work across the stack to create accessible, thoughtful websites
+            and tools. I’m currently looking to join a team where I can
+            contribute meaningfully and grow.
+          </p>
+
           <a
             href="#projects"
-            className="inline-block mt-4 bg-tertiary text-primary font-bold px-6 py-3 rounded hover:bg-opacity-90 transition"
+            className="mt-6 inline-block px-6 py-3 rounded-full bg-button text-white text-sm font-medium shadow-md hover:shadow-lg transition hover:scale-105"
           >
-            See My Work
+            Explore My Work
           </a>
         </div>
-      </div>
 
-      {/* Image / Illustration */}
-      <div className="md:w-1/2 w-full max-w-sm">
-        <img
-          src={profilePic}
-          alt="Swathy working on laptop"
-          className="w-full h-auto rounded-xl shadow-lg object-cover"
-        />
+        {/* Profile Image Block */}
+        <div className="flex-shrink-0 w-full md:w-[280px]">
+          <img
+            src={profilePic}
+            alt="Swathy Sukumaran"
+            className="rounded-2xl shadow-lg object-cover w-full h-auto max-h-[380px]"
+          />
+        </div>
       </div>
     </section>
   );
 }
-
-export default Intro;
