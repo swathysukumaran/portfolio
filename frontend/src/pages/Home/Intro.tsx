@@ -3,7 +3,7 @@ import profilePic from "../../assets/profile.jpeg"; // replace with actual image
 
 export default function Intro() {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary">
+    <section className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary mt-10">
       <span className="text-sm tracking-wider uppercase text-tertiary">
         Building with care & clarity
       </span>
