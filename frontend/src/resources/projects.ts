@@ -3,26 +3,31 @@ export const projects = [
     name: "Tempo – AI Travel Planner",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "Gemini API", "Google APIs"],
     description:
-      "An AI-powered travel planner that generates personalized itineraries from natural input and allows real-time voice-based editing and sharing.",
+      "A personalized travel planner powered by AI. Users can enter natural input to generate itineraries, edit them using voice, and share plans with others. Built with Google APIs and Gemini AI integration.",
     image: "/images/tempo-cover.png",
-    link: "https://tempoaitravelplanner.netlify.app/",
+    link: "https://tempo-frontend-lov2.onrender.com",
+    repo: "https://github.com/swathysukumaran/tempo", 
     caseStudyPath: "/projects/tempo",
   },
   {
     name: "Bright Futures Tutoring",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
     description:
-      "A full-stack tutoring appointment system built as a capstone project, featuring calendar-based bookings and tutor profile browsing.",
+      "A full-stack tutoring platform that lets students book sessions with tutors based on availability. Built as a group capstone project, with features like profile browsing, calendar-based bookings, and role-specific dashboards.",
     image: "/images/brightfutures-cover.png",
+    link: "https://brightfuture-1.onrender.com", 
+    repo: "https://github.com/swathysukumaran/brightfuture",
     caseStudyPath: "/projects/brightfutures",
   },
   {
     name: "HRMC Club Portal",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
     description:
-      "A dashboard application for managing club members, roles, annual fees, events, and expenses. Built for a real community club.",
+      "An admin dashboard for a local community club, built to manage members, roles, annual subscriptions, events, and expenses. This project is currently in progress.",
     image: "/images/hrmc-cover.png",
     inProgress: true,
+    link: "", // 🔗 Optional future link
+    repo: "", // 🔗 Optional future link
     caseStudyPath: "/projects/hrmc",
   },
 ];
