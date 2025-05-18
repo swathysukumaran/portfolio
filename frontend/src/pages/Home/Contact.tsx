@@ -8,6 +8,8 @@ function Contact() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -16,57 +18,72 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitted(true);
     console.log("Message submitted:", formData);
-    // TODO: connect to backend endpoint (e.g. /api/contact)
+
+    setFormData({ name: "", email: "", message: "" });
+
+    // TODO: connect to backend/email service
   };
 
   return (
     <section
-      className="w-full px-4 py-10 sm:px-6 md:px-10 max-w-2xl mx-auto"
+      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary max-w-2xl mx-auto"
       id="contact"
     >
-      <SectionTitle title="Contact Me" />
+      <SectionTitle title="Say Hello" />
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-6 mt-8 bg-surface p-6 rounded-lg shadow-md"
-      >
+      <p className="text-base text-secondary leading-relaxed mt-6">
+        If you’d like to work together, have a question, or just want to say hi
+        — I’d love to hear from you. Fill out the form below and I’ll get back
+        to you as soon as I can.
+      </p>
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-10">
         <input
           type="text"
           name="name"
-          placeholder="Your Name"
+          placeholder="Your name"
           required
           value={formData.name}
           onChange={handleChange}
-          className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tertiary"
+          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
 
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder="Your email"
           required
           value={formData.email}
           onChange={handleChange}
-          className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tertiary"
+          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
 
         <textarea
           name="message"
-          placeholder="Your Message"
+          placeholder="Your message"
           required
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="p-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-tertiary"
+          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted resize-none focus:outline-none focus:ring-2 focus:ring-tertiary"
         />
 
-        <button
-          type="submit"
-          className="bg-tertiary hover:bg-opacity-80 text-white py-3 rounded-md font-semibold transition duration-300"
-        >
-          Send Message
-        </button>
+        <div>
+          <button
+            type="submit"
+            className="bg-button text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
+          >
+            Send Message
+          </button>
+
+          {submitted && (
+            <p className="text-sm text-green-600 mt-3">
+              Thanks for reaching out! I’ll be in touch soon.
+            </p>
+          )}
+        </div>
       </form>
     </section>
   );
