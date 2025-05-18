@@ -4,28 +4,26 @@ import { experiences } from "../../resources/experiences";
 
 function Experiences() {
   return (
-    <section className="w-full px-4 py-10 sm:px-6 md:px-10" id="experience">
+    <section
+      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary"
+      id="experience"
+    >
       <SectionTitle title="Experience" />
 
-      <div className="mt-8 space-y-10 relative border-l-2 border-tertiary pl-6">
+      <div className="mt-12 max-w-4xl  flex flex-col gap-14">
         {experiences.map((exp, index) => (
-          <div key={index} className="relative group">
-            {/* Dot Marker */}
-            <span className="absolute -left-3 top-2 w-4 h-4 bg-tertiary rounded-full shadow-md"></span>
+          <div key={index} className="flex flex-col gap-2">
+            <h3 className="text-tertiary text-lg font-medium">{exp.company}</h3>
 
-            {/* Card Content */}
-            <div className="bg-surface p-5 rounded-lg shadow-md hover:shadow-xl transition">
-              <h3 className="text-xl text-secondary font-semibold">
-                {exp.role}
-              </h3>
-              <h4 className="text-tertiary text-md font-medium">
-                {exp.company}
-              </h4>
-              <span className="text-gray-400 text-sm italic">{exp.period}</span>
-              <p className="text-white mt-3 text-sm leading-relaxed">
-                {exp.description ?? "No description provided for this role."}
+            <p className="text-xl font-semibold text-secondary">{exp.role}</p>
+
+            <span className="text-sm text-muted italic">{exp.period}</span>
+
+            {exp.description && (
+              <p className="text-base leading-relaxed text-secondary mt-2">
+                {exp.description}
               </p>
-            </div>
+            )}
           </div>
         ))}
       </div>
