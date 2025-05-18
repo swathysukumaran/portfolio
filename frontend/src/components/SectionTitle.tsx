@@ -3,11 +3,14 @@ import React from "react";
 type SectionTitleProps = {
   title: string;
 };
+
 function SectionTitle({ title }: SectionTitleProps) {
   return (
-    <div className="flex gap-10 items-center py-10">
-      <h1 className="text-3xl">{title}</h1>
-      <div className="w-50 h-[1px] bg-tertiary"></div>
+    <div className="flex items-center gap-6 py-10">
+      <h2 className="text-2xl md:text-3xl font-semibold text-secondary whitespace-nowrap">
+        {title}
+      </h2>
+      <div className="flex-grow h-px bg-tertiary opacity-60" />
     </div>
   );
 }
