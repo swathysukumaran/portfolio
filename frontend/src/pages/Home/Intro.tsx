@@ -10,10 +10,10 @@ function Intro() {
         <h1 className="text-secondary text-4xl sm:text-5xl font-bold leading-tight">
           Swathy Sukumaran Vadakkath
         </h1>
-        <h2 className="text-white text-2xl sm:text-3xl font-semibold">
+        <h2 className=" text-2xl sm:text-3xl font-semibold">
           I craft modern, meaningful web experiences.
         </h2>
-        <p className="text-white text-sm sm:text-base leading-relaxed max-w-md">
+        <p className=" text-sm sm:text-base leading-relaxed max-w-md">
           A full-stack developer with a passion for turning ideas into
           accessible and efficient digital solutions. My work blends
           functionality, clarity, and a love for well-crafted UI.

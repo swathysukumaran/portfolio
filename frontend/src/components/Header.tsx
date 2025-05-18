@@ -11,7 +11,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-primary/60 backdrop-blur-md border-b border-tertiary">
+    <header className="fixed top-0 w-full z-50 bg-primary/60 backdrop-blur-md ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-tertiary text-xl font-bold tracking-wider">
@@ -24,7 +24,7 @@ function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white text-sm hover:text-tertiary transition"
+              className="text-sm hover:text-tertiary transition"
             >
               {link.label}
             </a>
@@ -48,7 +48,7 @@ function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white text-sm hover:text-tertiary transition"
+              className="text-sm hover:text-tertiary transition"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
