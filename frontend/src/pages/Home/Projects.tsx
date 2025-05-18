@@ -14,8 +14,13 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-surface rounded-xl shadow-sm hover:shadow-md transition overflow-hidden flex flex-col"
+            className="relative bg-surface rounded-xl shadow-sm hover:shadow-md transition overflow-hidden flex flex-col"
           >
+            {project.inProgress && (
+              <div className="absolute top-4 right-4 z-10 bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full">
+                Currently working on
+              </div>
+            )}
             {/* Image */}
             {project.image && (
               <img
