@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Education from "./Education";
 
 function Home() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function Home() {
         <Intro />
         <About />
         <Experiences />
+        <Education />
         <Projects />
         <Contact />
       </div>
