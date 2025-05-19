@@ -1,5 +1,4 @@
-import React from "react";
-import profilePic from "../../assets/profile.jpeg"; // replace with actual image
+import profilePic from "../../assets/swathy.jpg"; // replace with actual image
 
 export default function Intro() {
   return (
