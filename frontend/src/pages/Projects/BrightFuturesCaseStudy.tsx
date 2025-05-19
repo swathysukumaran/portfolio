@@ -1,20 +1,47 @@
-import React from "react";
-
+import dashboard from "../../assets/brightfuture-dashboard.png";
+import booking from "../../assets/brightfuture-booking.png";
+import tutors from "../../assets/brightfuture-tutors.png";
+import landing from "../../assets/brightfuture-landing.png";
 export default function BrightFuturesCaseStudy() {
   return (
-    <div className="bg-primary text-white min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-primary  mx-auto min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-tertiary">
+        <h1 className="text-2xl md:text-4xl max-w-6xl text-center mx-auto font-bold text-tertiary">
           📚 Bright Futures Tutoring – Tutor Booking Web App
         </h1>
-        <p className="mt-4 text-lg text-secondary max-w-2xl">
+        {/* Screenshots */}
+        <section className="mb-10 mt-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            <img
+              src={landing}
+              alt="Booking Form"
+              className="rounded-xl shadow-lg"
+            />
+            <img
+              src={dashboard}
+              alt="Home Page"
+              className="rounded-xl shadow-lg"
+            />
+            <img
+              src={tutors}
+              alt="Tutor Listing"
+              className="rounded-xl shadow-lg"
+            />
+            <img
+              src={booking}
+              alt="Booking Form"
+              className="rounded-xl shadow-lg"
+            />
+          </div>
+        </section>
+        <p className="mt-8 text-lg text-secondary max-w-4xl mx-auto">
           Bright Futures Tutoring was developed as part of a group project for
           our Project Management course at North Island College. The objective
           was to create a functional tutoring platform that allows students to
           browse tutors and book appointments.
         </p>
-        <p className="mt-4 max-w-3xl">
+        <p className="mt-4 max-w-4xl mx-auto">
           While the project was collaboratively planned, I took complete
           ownership of the development process. I built the entire application
           using the MERN stack (MongoDB, Express, React, Node.js) under strict
@@ -23,7 +50,7 @@ export default function BrightFuturesCaseStudy() {
       </section>
 
       {/* Project Timeline and Goals */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🗕 Development Timeline & Focus
         </h2>
@@ -40,7 +67,7 @@ export default function BrightFuturesCaseStudy() {
       </section>
 
       {/* What I Built */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           💪 What I Built
         </h2>
@@ -58,7 +85,7 @@ export default function BrightFuturesCaseStudy() {
       </section>
 
       {/* Challenges and Learning */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🔍 Key Learning and Challenges
         </h2>
@@ -78,7 +105,7 @@ export default function BrightFuturesCaseStudy() {
       </section>
 
       {/* Personal Reflection */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           ✨ Personal Reflection
         </h2>
@@ -92,30 +119,6 @@ export default function BrightFuturesCaseStudy() {
           Bright Futures started as a college project — now it's a real, working
           app I feel confident including in my portfolio.
         </p>
-      </section>
-
-      {/* Screenshots */}
-      <section className="mb-10 max-w-6xl">
-        <h2 className="text-2xl font-semibold text-tertiary mb-4">
-          📸 Screenshots
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img
-            src="/images/brightfutures-1.png"
-            alt="Home Page"
-            className="rounded-xl shadow-lg"
-          />
-          <img
-            src="/images/brightfutures-2.png"
-            alt="Tutor Listing"
-            className="rounded-xl shadow-lg"
-          />
-          <img
-            src="/images/brightfutures-3.png"
-            alt="Booking Form"
-            className="rounded-xl shadow-lg"
-          />
-        </div>
       </section>
     </div>
   );

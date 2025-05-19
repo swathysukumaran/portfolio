@@ -1,4 +1,3 @@
-import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
 
@@ -26,7 +25,7 @@ function Projects() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-52 object-cover"
+                className="w-full h-52 object-contain"
               />
             )}
 

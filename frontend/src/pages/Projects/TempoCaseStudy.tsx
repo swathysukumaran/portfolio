@@ -1,17 +1,21 @@
-import React from "react";
-
+import landing from "../../assets/tempo-landing.jpg";
+import inputimage from "../../assets/tempo-input.jpg";
+import hotel from "../../assets/tempo-hotel.jpg";
+import modify from "../../assets/tempo-modify.png";
+import temposhare from "../../assets/tempo-share.png";
+import tempotrip from "../../assets/tempo-trip.jpg";
 export default function TempoCaseStudy() {
   return (
-    <div className="bg-primary text-white min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-primary min-h-screen  mx-auto py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-tertiary">
+        <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">
           🌍 Tempo – A Travel Planner That Understands You
         </h1>
       </section>
 
       {/* Introduction */}
-      <section className="mb-10 max-w-3xl space-y-4 ">
+      <section className="mb-10 max-w-4xl mx-auto space-y-4 ">
         <p className="mt-4 text-lg text-secondary max-w-2xl">
           Tempo began with one simple idea: everyone travels differently — even
           to the same place, on the same dates.
@@ -33,38 +37,38 @@ export default function TempoCaseStudy() {
         </p>
       </section>
       {/* Screenshots */}
-      <section className="mb-12 max-w-6xl">
+      <section className="mb-12 max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-4">
           📸 Screenshots
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <img
-            src="/images/tempo-1.png"
+            src={landing}
             alt="Trip Input"
             className="rounded-xl shadow-lg"
           />
           <img
-            src="/images/tempo-2.png"
+            src={inputimage}
             alt="Generated Itinerary"
             className="rounded-xl shadow-lg"
           />
           <img
-            src="/images/tempo-3.png"
+            src={hotel}
             alt="Hotel Suggestions"
             className="rounded-xl shadow-lg"
           />
           <img
-            src="/images/tempo-4.png"
+            src={modify}
             alt="Map Integration"
             className="rounded-xl shadow-lg"
           />
           <img
-            src="/images/tempo-5.png"
+            src={temposhare}
             alt="Share Feature"
             className="rounded-xl shadow-lg"
           />
           <img
-            src="/images/tempo-6.png"
+            src={tempotrip}
             alt="Edit Trip View"
             className="rounded-xl shadow-lg"
           />
@@ -72,7 +76,7 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* From Forms to Freedom */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🧠 From Forms to Freedom
         </h2>
@@ -118,36 +122,34 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* What Tempo Can Do */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           ✨ What Tempo Can Do
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
-            🧠 AI-generated itineraries using Gemini, based on natural text or
+            AI-generated itineraries using Gemini, based on natural text or
             speech
           </li>
           <li>
-            🗣️ Voice input using Google Speech-to-Text for hands-free planning
+            Voice input using Google Speech-to-Text for hands-free planning
+          </li>
+          <li>Activities and hotels link to real locations via Google Maps</li>
+          <li>Each item includes photos from Google Places API</li>
+          <li> Trip saving and revisit anytime through interactive cards</li>
+          <li> Modify trips anytime using simple natural commands</li>
+          <li>
+            Share trips via email (SendGrid), with view or edit permission
           </li>
           <li>
-            🗺️ Activities and hotels link to real locations via Google Maps
-          </li>
-          <li>📸 Each item includes photos from Google Places API</li>
-          <li>💾 Trip saving and revisit anytime through interactive cards</li>
-          <li>🔁 Modify trips anytime using simple natural commands</li>
-          <li>
-            📤 Share trips via email (SendGrid), with view or edit permission
-          </li>
-          <li>
-            🔐 Protected routes to ensure only registered users can create or
+            Protected routes to ensure only registered users can create or
             modify trips
           </li>
         </ul>
       </section>
 
       {/* Challenges */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🧩 Major Challenges (and What I Learned)
         </h2>
@@ -184,28 +186,8 @@ export default function TempoCaseStudy() {
         </p>
       </section>
 
-      {/* Why Not Just Use Gemini */}
-      <section className="mb-10 max-w-3xl">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          💡 Why Not Just Use ChatGPT or Gemini Directly?
-        </h2>
-        <p>Good question — but here's why Tempo is different.</p>
-        <p>It’s not just an AI window. It’s a complete planning experience:</p>
-        <ul className="list-disc list-inside pl-5 mb-2">
-          <li>It keeps your trip organized</li>
-          <li>Adds maps and real photos</li>
-          <li>Lets you save, modify, and share</li>
-          <li>You can use text or voice</li>
-          <li>You don’t need to start over every time</li>
-        </ul>
-        <p>
-          It's a one-stop, guided interface for travel planning — built with
-          real-world behavior in mind.
-        </p>
-      </section>
-
       {/* Learnings */}
-      <section className="max-w-3xl">
+      <section className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🌱 What I Learned
         </h2>

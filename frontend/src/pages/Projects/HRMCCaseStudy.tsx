@@ -5,7 +5,7 @@ export default function HRMCCaseStudy() {
     <div className="bg-primary text-white min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-tertiary">
+        <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">
           🏛️ HRMC Club Portal
         </h1>
         <p className="mt-4 text-lg text-secondary max-w-2xl">
