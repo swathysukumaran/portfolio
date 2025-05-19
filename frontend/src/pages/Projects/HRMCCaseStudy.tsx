@@ -2,20 +2,20 @@ import React from "react";
 
 export default function HRMCCaseStudy() {
   return (
-    <div className="bg-primary text-white min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-primary  min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">
           🏛️ HRMC Club Portal
         </h1>
-        <p className="mt-4 text-lg text-secondary max-w-2xl">
+        <p className="mt-4 text-lg text-secondary max-w-4xl mx-auto">
           HRMC is a local community in my hometown that needed a digital system
           to manage its growing member base, track subscriptions, oversee club
           roles, and coordinate events. I’m currently developing a custom web
           portal to help the club manage all its internal operations
           efficiently.
         </p>
-        <p className="mt-4 max-w-3xl">
+        <p className="mt-4 max-w-4xl mx-auto">
           This project gave me a chance to design and build a real-world admin
           dashboard application from scratch using the MERN stack, with a focus
           on structured data, custom roles, and financial tracking.
@@ -23,7 +23,7 @@ export default function HRMCCaseStudy() {
       </section>
 
       {/* Goals */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🎯 Project Goals
         </h2>
@@ -43,7 +43,7 @@ export default function HRMCCaseStudy() {
       </section>
 
       {/* Features */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           🛠️ Features Being Built
         </h2>
@@ -83,7 +83,7 @@ export default function HRMCCaseStudy() {
         </p>
       </section>
 
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           👩‍💻 My Role
         </h2>
@@ -108,7 +108,7 @@ export default function HRMCCaseStudy() {
       </section>
 
       {/* Next Steps */}
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           📌 Next Steps
         </h2>
@@ -126,7 +126,7 @@ export default function HRMCCaseStudy() {
       </section>
 
       {/* Why It Matters */}
-      <section className="max-w-3xl">
+      <section className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
           💡 Why This Project Matters
         </h2>

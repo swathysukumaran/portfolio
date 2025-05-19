@@ -26,7 +26,7 @@ export const projects = [
     name: "HRMC Club Portal",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
     description:
-      "An admin dashboard for a local community club, built to manage members, roles, annual subscriptions, events, and expenses. This project is currently in progress.",
+      "An admin dashboard for a local community club, to manage members, roles, annual subscriptions, events, and expenses. This project is currently in progress.",
     image:hrmc,
     inProgress: true,
     link: "", // 🔗 Optional future link
