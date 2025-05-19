@@ -6,8 +6,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const allowedOrigins = [
+    "https://portfolio-y2bu.onrender.com",
+    "http://localhost:5173",
+];
 
-app.use(cors());
+app.use(
+    cors({
+        origin: allowedOrigins,
+    })
+);
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
