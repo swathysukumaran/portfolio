@@ -26,7 +26,7 @@ function Education() {
     >
       <SectionTitle title="Education" />
 
-      <div className="mt-10 relative border-l-2 border-tertiary pl-6 space-y-10">
+      <div className="mt-10 relative   space-y-10">
         {education.map((item, index) => (
           <div key={index} className="relative group">
             {/* <span className="absolute -left-3 top-2 w-4 h-4 bg-tertiary rounded-full shadow-md"></span> */}
