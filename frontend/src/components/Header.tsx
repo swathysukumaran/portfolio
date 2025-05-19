@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function Header() {
@@ -14,8 +14,9 @@ function Header() {
     <header className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md  transition-all">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
         {/* Logo */}
-        <span className="font-extrabold text-2xl text-tertiary">SSV</span>
-
+        <a href="/#intro">
+          <span className="font-extrabold text-2xl text-tertiary">SSV</span>
+        </a>
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (

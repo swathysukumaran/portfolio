@@ -2,7 +2,10 @@ import profilePic from "../../assets/swathy.jpg"; // replace with actual image
 
 export default function Intro() {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary mt-10">
+    <section
+      className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary mt-10"
+      id="intro"
+    >
       <span className="text-sm tracking-wider uppercase text-tertiary">
         Building with care & clarity
       </span>
@@ -13,9 +16,10 @@ export default function Intro() {
           <h1 className="text-4xl md:text-5xl font-semibold leading-snug tracking-tight max-w-3xl">
             Hello, I’m Swathy —
             <br />
-            a full-stack developer who believes
-            <br className="hidden md:block" />
-            great software should feel simple.
+            <span className="text-2xl">
+              a full-stack developer who believes great software should feel
+              simple.
+            </span>
           </h1>
 
           <p className="text-lg leading-relaxed mt-4 max-w-2xl">

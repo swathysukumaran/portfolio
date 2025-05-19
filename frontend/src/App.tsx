@@ -5,18 +5,44 @@ import Home from "./pages/Home";
 import TempoCaseStudy from "./pages/Projects/TempoCaseStudy";
 import BrightFuturesCaseStudy from "./pages/Projects/BrightFuturesCaseStudy";
 import HRMCCaseStudy from "./pages/Projects/HRMCCaseStudy";
+import Layout from "./components/Layout"; // ⬅️ adjust path if needed
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/tempo" element={<TempoCaseStudy />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects/tempo"
+          element={
+            <Layout>
+              <TempoCaseStudy />
+            </Layout>
+          }
+        />
         <Route
           path="/projects/brightfutures"
-          element={<BrightFuturesCaseStudy />}
+          element={
+            <Layout>
+              <BrightFuturesCaseStudy />
+            </Layout>
+          }
         />
-        <Route path="/projects/hrmc" element={<HRMCCaseStudy />} />
+        <Route
+          path="/projects/hrmc"
+          element={
+            <Layout>
+              <HRMCCaseStudy />
+            </Layout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HRMCCaseStudy() {
   return (
-    <div className="bg-primary  min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-primary mt-14 min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">

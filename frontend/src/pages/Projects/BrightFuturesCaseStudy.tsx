@@ -4,14 +4,14 @@ import tutors from "../../assets/brightfuture-tutors.png";
 import landing from "../../assets/brightfuture-landing.png";
 export default function BrightFuturesCaseStudy() {
   return (
-    <div className="bg-primary  mx-auto min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-primary mt-14 mx-auto min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-2xl md:text-4xl max-w-6xl text-center mx-auto font-bold text-tertiary">
           📚 Bright Futures Tutoring – Tutor Booking Web App
         </h1>
         {/* Screenshots */}
-        <section className="mb-10 mt-12 max-w-6xl mx-auto">
+        <section className="mb-10 mt-12 max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
             <img
               src={landing}
