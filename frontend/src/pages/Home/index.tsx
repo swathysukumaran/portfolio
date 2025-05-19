@@ -23,7 +23,7 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="bg-primary px-20 sm:px-5">
+      <div className="bg-primary sm:px-5">
         <Intro />
         <About />
         <Experiences />
