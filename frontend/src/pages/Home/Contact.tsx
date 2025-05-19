@@ -21,7 +21,7 @@ function Contact() {
 
     try {
       const res = await fetch(
-        "https://tempo-backend-w4iy.onrender.com/api/contact",
+        "https://portfolio-backend-xx0a.onrender.com/api/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
