@@ -19,7 +19,7 @@ app.post("/api/contact", async (req, res) => {
         subject: `Message from ${name}`,
         text: `Email: ${email}\n\nMessage:\n${message}`,
     };
-
+    console.log("Sending email:", msg);
     try {
         await sgMail.send(msg);
         res.status(200).json({ success: true });
