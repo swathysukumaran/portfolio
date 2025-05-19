@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function HRMCCaseStudy() {
   return (
     <div className="bg-primary mt-14 min-h-screen py-12 px-6 md:px-16">
