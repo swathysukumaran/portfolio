@@ -6,7 +6,7 @@ import temposhare from "../../assets/tempo-share.png";
 import tempotrip from "../../assets/tempo-trip.jpg";
 export default function TempoCaseStudy() {
   return (
-    <div className="bg-primary min-h-screen mt-14 mx-auto py-12 px-6 md:px-16">
+    <div className=" min-h-screen mt-14 mx-auto py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">

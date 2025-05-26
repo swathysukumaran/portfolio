@@ -4,7 +4,7 @@ import { projects } from "../../resources/projects";
 function Projects() {
   return (
     <section
-      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary max-w-7xl mx-auto"
+      className="w-full px-6 md:px-24 py-20 text-secondary max-w-7xl mx-auto"
       id="projects"
     >
       <SectionTitle title="Projects" />

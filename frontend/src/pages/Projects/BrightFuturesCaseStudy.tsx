@@ -4,7 +4,7 @@ import tutors from "../../assets/brightfuture-tutors.png";
 import landing from "../../assets/brightfuture-landing.png";
 export default function BrightFuturesCaseStudy() {
   return (
-    <div className="bg-primary mt-14 mx-auto min-h-screen py-12 px-6 md:px-16">
+    <div className=" mt-14 mx-auto min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-2xl md:text-4xl max-w-6xl text-center mx-auto font-bold text-tertiary">
