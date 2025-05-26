@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import swathyLogo from "../../assets/swathy-logo.png";
 const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
@@ -17,7 +17,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/#intro" className="flex items-center gap-2">
           <img
-            src="/swathy-logo.png"
+            src={swathyLogo}
             alt="Swathy Logo"
             className="h-10 w-auto object-contain"
           />
