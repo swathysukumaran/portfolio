@@ -3,14 +3,14 @@ import profilePic from "../../assets/swathy.jpg"; // replace with actual image
 export default function Intro() {
   return (
     <section
-      className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary mt-10"
+      className="min-h-[80vh] flex flex-col justify-center gap-8 px-6 md:px-24 py-20 bg-primary text-secondary mt-10 max-w-7xl mx-auto"
       id="intro"
     >
       <span className="text-sm tracking-wider uppercase text-tertiary">
         Building with care & clarity
       </span>
 
-      <div className="flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl mx-auto">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-10 ">
         {/* Text Block */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-semibold leading-snug tracking-tight max-w-3xl">
