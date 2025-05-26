@@ -1,125 +1,85 @@
 export default function HRMCCaseStudy() {
   return (
-    <div className=" mt-14 min-h-screen py-12 px-6 md:px-16">
+    <div className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto font-body">
       {/* Hero Section */}
-      <section className="mb-12">
-        <h1 className="text-2xl md:text-4xl text-center max-w-6xl mx-auto font-bold text-tertiary">
+      <section className="text-center max-w-4xl mx-auto mb-16">
+        <h1 className="text-3xl md:text-5xl font-heading font-bold text-primary">
           🏛️ HRMC Club Portal
         </h1>
-        <p className="mt-4 text-lg text-secondary max-w-4xl mx-auto">
+        <p className="mt-6 text-lg leading-relaxed">
+          A full-featured club management dashboard built with the MERN stack.
+        </p>
+      </section>
+
+      {/* Project Overview */}
+      <section className="max-w-3xl mx-auto space-y-6">
+        <p>
           HRMC is a local community in my hometown that needed a digital system
           to manage its growing member base, track subscriptions, oversee club
           roles, and coordinate events. I’m currently developing a custom web
           portal to help the club manage all its internal operations
           efficiently.
         </p>
-        <p className="mt-4 max-w-4xl mx-auto">
+        <p>
           This project gave me a chance to design and build a real-world admin
           dashboard application from scratch using the MERN stack, with a focus
           on structured data, custom roles, and financial tracking.
         </p>
       </section>
 
-      {/* Goals */}
-      <section className="mb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
+      {/* Project Goals */}
+      <section className="mt-16 max-w-3xl mx-auto">
+        <h2 className="text-xl font-semibold text-primary font-heading mb-4">
           🎯 Project Goals
         </h2>
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-disc list-inside space-y-2 text-zinc-700">
           <li>Digitally manage all member information</li>
           <li>
-            Track membership roles, including limits on leadership positions
+            Track membership roles with restrictions on leadership positions
           </li>
-          <li>Handle yearly subscription payments and payment status</li>
-          <li>
-            Organize and record events and all related activity (members
-            involved, funds raised/spent, type of event)
-          </li>
-          <li>Maintain logs of general club expenses</li>
-          <li>Create a centralized dashboard for club admins</li>
+          <li>Handle yearly subscription payments and dues</li>
+          <li>Manage club events, collaborations, and budgets</li>
+          <li>Track overall expenses and financial summaries</li>
         </ul>
       </section>
 
       {/* Features */}
-      <section className="mb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          Features Being Built
-        </h2>
-
-        <h3 className="font-semibold mt-4">✅ Member Management</h3>
-        <p>
-          Detailed member profiles with fields like name, DOB, blood group,
-          photo, contact info, occupation details, and interests. Each member
-          gets an automatically assigned membership number (e.g., H-101, H-102).
-        </p>
-
-        <h3 className="font-semibold mt-4">✅ Role Assignment</h3>
-        <p>One-click assignment of structured roles:</p>
-        <ul className="list-disc list-inside ml-5">
-          <li>President, General Secretary, Treasurer (one each)</li>
-          <li>Vice Presidents & Joint Secretaries (max two each)</li>
-          <li>Executives & Regional Coordinators (with region info)</li>
-          <li>Default role: Member</li>
-        </ul>
-
-        <h3 className="font-semibold mt-4">✅ Subscription Tracking</h3>
-        <p>
-          Tracks annual payment status with ability to view who has paid and who
-          is pending. This is updated each year.
-        </p>
-
-        <h3 className="font-semibold mt-4">✅ Event Management</h3>
-        <p>
-          Add and update events with type (official, collaborated, charity),
-          description, members involved, expenses and income sources, and total
-          cost summary.
-        </p>
-
-        <h3 className="font-semibold mt-4">✅ Expenses Log</h3>
-        <p>
-          Track general club expenses with details on type, amount, and date.
-        </p>
+      <section className="mt-20 space-y-20">
+        <CaseStudyBlock
+          title="👥 Member Management"
+          text="Custom forms and views for recording detailed member data — including contact info, roles, DOB, interests, and profile photos."
+        />
+        <CaseStudyBlock
+          title="💳 Subscription Tracking"
+          text="Each member's payment history is tracked annually, with filters to view defaulters or fully paid members."
+        />
+        <CaseStudyBlock
+          title="🗓 Event Coordination"
+          text="Admins can create events, track participation, add expenses, and record partner organization info."
+        />
+        <CaseStudyBlock
+          title="📊 Role + Access Control"
+          text="Custom admin roles limit access to sensitive areas, while allowing team-wide collaboration."
+        />
+        <CaseStudyBlock
+          title="📁 Built for Scalability"
+          text="Code structured as reusable components with MongoDB collections designed to support growth and modular expansion."
+        />
       </section>
+    </div>
+  );
+}
 
-      <section className="mb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">My Role</h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li>
-            Planning and designing the full data schema and dashboard layout
-          </li>
-          <li>
-            Currently building the backend logic for member creation, role
-            restrictions, and event recording
-          </li>
-          <li>Working on custom forms and tables using React + Tailwind</li>
-          <li>
-            Progressively integrating CRUD functionality using MongoDB and
-            Express
-          </li>
-          <li>
-            Aiming to structure everything as a scalable, real-world club admin
-            tool
-          </li>
-        </ul>
-      </section>
-
-      {/* Next Steps */}
-      <section className="mb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          Next Steps
-        </h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li>
-            Add role-based access control (e.g., only admins can edit data)
-          </li>
-          <li>Implement search and filter tools for members and events</li>
-          <li>
-            Build summary reports: member counts, role stats, total fees
-            collected, and event expenses
-          </li>
-          <li>Optimize UI for mobile and tablet view</li>
-        </ul>
-      </section>
+// 🔄 Reusable feature block
+function CaseStudyBlock({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="space-y-3 max-w-3xl mx-auto">
+      <h2 className="text-xl font-semibold font-heading text-primary">
+        {title}
+      </h2>
+      <p className="text-base text-zinc-700 font-body leading-relaxed">
+        {text}
+      </p>
     </div>
   );
 }
