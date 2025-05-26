@@ -1,11 +1,11 @@
 import SectionTitle from "../../components/SectionTitle";
 
-function Education() {
+export default function Education() {
   const education = [
     {
       degree: "Postgraduate Diploma – Digital Design + Development",
       institution: "North Island College, British Columbia, Canada",
-      period: "2023 – 2025 ",
+      period: "2023 – 2025",
     },
     {
       degree: "Master’s in Computer Engineering",
@@ -22,26 +22,26 @@ function Education() {
   return (
     <section
       id="education"
-      className="w-full px-6 md:px-24 py-20 text-secondary max-w-7xl mx-auto"
+      className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto"
     >
       <SectionTitle title="Education" />
 
-      <div className="mt-10 relative   space-y-10">
+      <div className="mt-16 space-y-10 max-w-4xl mx-auto">
         {education.map((item, index) => (
-          <div key={index} className="relative group">
-            {/* <span className="absolute -left-3 top-2 w-4 h-4 bg-tertiary rounded-full shadow-md"></span> */}
-            <div className="bg-surface p-5 rounded-lg shadow-sm">
-              <h3 className="text-tertiary font-semibold text-lg">
-                {item.degree}
-              </h3>
-              <p className="text-sm">{item.institution}</p>
-              <p className="text-muted text-xs italic">{item.period}</p>
-            </div>
+          <div
+            key={index}
+            className="bg-white border border-primary rounded-xl p-6 shadow-sm"
+          >
+            <h3 className="text-lg md:text-xl font-semibold text-primary font-heading">
+              {item.degree}
+            </h3>
+            <p className="text-base md:text-lg mt-1 font-body">
+              {item.institution}
+            </p>
+            <p className="text-sm italic text-zinc-500 mt-1">{item.period}</p>
           </div>
         ))}
       </div>
     </section>
   );
 }
-
-export default Education;
