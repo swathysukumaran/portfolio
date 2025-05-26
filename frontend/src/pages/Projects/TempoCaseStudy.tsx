@@ -9,7 +9,7 @@ export default function TempoCaseStudy() {
   return (
     <div className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto font-body">
       {/* Hero */}
-      <section className="mb-16 text-center max-w-4xl mx-auto">
+      <section className="mb-16 text-center  mx-auto">
         <h1 className="text-3xl md:text-5xl font-heading font-bold text-primary">
           🌍 Tempo – A Travel Planner That Understands You
         </h1>
