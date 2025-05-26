@@ -19,7 +19,7 @@ export default function Header() {
           <img
             src={swathyLogo}
             alt="Swathy Logo"
-            className="h-10 w-auto object-contain"
+            className="h-15 w-auto object-contain"
           />
         </a>
 
