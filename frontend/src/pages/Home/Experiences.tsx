@@ -1,25 +1,29 @@
 import SectionTitle from "../../components/SectionTitle";
 import { experiences } from "../../resources/experiences";
 
-function Experiences() {
+export default function Experiences() {
   return (
     <section
-      className="w-full px-6 md:px-24 py-20  text-secondary max-w-7xl mx-auto"
       id="experience"
+      className="bg-[var(--color-bg)] text-[var(--color-text)] px-6 md:px-24 py-24 max-w-7xl mx-auto"
     >
       <SectionTitle title="Experience" />
 
-      <div className="mt-12 max-w-4xl  flex flex-col gap-14">
+      <div className="mt-16 space-y-10">
         {experiences.map((exp, index) => (
-          <div key={index} className="flex flex-col gap-2">
-            <h3 className="text-tertiary text-lg font-medium">{exp.company}</h3>
-
-            <p className="text-xl font-semibold text-secondary">{exp.role}</p>
-
-            <span className="text-sm text-muted italic">{exp.period}</span>
-
+          <div
+            key={index}
+            className="bg-white border border-[var(--color-primary)] shadow-sm rounded-xl p-6 space-y-2 max-w-4xl mx-auto"
+          >
+            <div className="flex justify-between flex-wrap gap-2 items-center">
+              <h3 className="text-xl font-semibold text-[var(--color-primary)]">
+                {exp.role}
+              </h3>
+              <span className="text-sm italic text-gray-500">{exp.period}</span>
+            </div>
+            <p className="text-lg font-medium">{exp.company}</p>
             {exp.description && (
-              <p className="text-base leading-relaxed text-secondary mt-2">
+              <p className="text-base leading-relaxed mt-2 text-gray-700">
                 {exp.description}
               </p>
             )}
@@ -29,5 +33,3 @@ function Experiences() {
     </section>
   );
 }
-
-export default Experiences;
