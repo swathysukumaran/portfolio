@@ -110,8 +110,10 @@ export default function TempoCaseStudy() {
             <li>"I’m traveling with my child, but want one solo evening."</li>
           </ul>
           <p>
-            Helping users tap into this level of personalization is now a UX
-            goal I plan to keep improving.
+            To motivate users to create richer prompts, I got rid of the quick
+            select options, and added example prompts to help the users see the
+            potential of what they could ask. This led to more creative and
+            personalized results.
           </p>
         </div>
 
