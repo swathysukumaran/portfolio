@@ -10,6 +10,9 @@ const skills = [
   "Tailwind CSS",
   "HTML",
   "CSS",
+  "Java",
+  "Angular",
+  "React Native",
 ];
 
 export default function About() {
