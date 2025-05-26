@@ -19,7 +19,7 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* Overview */}
-      <section className="mt-20 max-w-3xl mx-auto space-y-6 font-body">
+      <section className="mt-20 mx-auto space-y-6 font-body">
         <p>
           Tempo started as a simple idea: what if travel planning was
           personalized through AI — not just by location or dates, but by mood,
