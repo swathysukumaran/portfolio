@@ -15,7 +15,7 @@ function About() {
 
   return (
     <section
-      className="w-full px-6 md:px-24 py-24 bg-primary text-secondary"
+      className="w-full px-6 md:px-24 py-24 bg-primary text-secondary max-w-7xl mx-auto"
       id="about"
     >
       <SectionTitle title="About Me" />

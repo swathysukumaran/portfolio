@@ -4,7 +4,7 @@ import { experiences } from "../../resources/experiences";
 function Experiences() {
   return (
     <section
-      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary"
+      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary max-w-7xl mx-auto"
       id="experience"
     >
       <SectionTitle title="Experience" />

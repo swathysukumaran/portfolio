@@ -10,7 +10,7 @@ export default function Intro() {
         Building with care & clarity
       </span>
 
-      <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl mx-auto">
         {/* Text Block */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-semibold leading-snug tracking-tight max-w-3xl">

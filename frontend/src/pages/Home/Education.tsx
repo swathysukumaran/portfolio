@@ -22,7 +22,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary"
+      className="w-full px-6 md:px-24 py-20 bg-primary text-secondary max-w-7xl mx-auto"
     >
       <SectionTitle title="Education" />
 
