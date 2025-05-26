@@ -9,7 +9,7 @@ export default function Projects() {
     >
       <SectionTitle title="Projects" />
 
-      <div className="mt-16 grid gap-10 md:grid-cols-3">
+      <div className="mt-16 grid gap-5 md:grid-cols-3">
         {projects.map((project, index) => (
           <div
             key={index}

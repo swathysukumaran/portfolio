@@ -42,63 +42,75 @@ function Contact() {
 
   return (
     <section
-      className="w-full px-6 md:px-24 py-20 text-secondary max-w-3xl mx-auto"
       id="contact"
+      className="bg-bg text-text px-6 md:px-24 py-24 max-w-3xl mx-auto"
     >
       <SectionTitle title="Say Hello" />
 
-      <p className="text-base text-secondary leading-relaxed mt-6">
+      <p className="text-base leading-relaxed mt-6 font-body">
         If you’d like to work together, have a question, or just want to say hi
-        — I’d love to hear from you. Fill out the form below and I’ll get back
-        to you as soon as I can.
+        — I’d love to hear from you.
       </p>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-10">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-tertiary"
-        />
+      {submitted ? (
+        <p className="mt-8 text-green-600 font-medium">
+          ✅ Your message has been sent successfully!
+        </p>
+      ) : (
+        <form onSubmit={handleSubmit} className="mt-10 space-y-6 font-body">
+          <div>
+            <label htmlFor="name" className="block mb-2 font-medium">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+          </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-tertiary"
-        />
+          <div>
+            <label htmlFor="email" className="block mb-2 font-medium">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+          </div>
 
-        <textarea
-          name="message"
-          placeholder="Your message"
-          required
-          rows={5}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-primary text-secondary border border-muted placeholder:text-muted resize-none focus:outline-none focus:ring-2 focus:ring-tertiary"
-        />
+          <div>
+            <label htmlFor="message" className="block mb-2 font-medium">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows={5}
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+          </div>
 
-        <div>
           <button
             type="submit"
-            className="bg-button text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
+            className="px-6 py-3 bg-primary text-white rounded-full font-medium hover:brightness-110 transition"
           >
             Send Message
           </button>
-
-          {submitted && (
-            <p className="text-sm text-green-600 mt-3">
-              Thanks for reaching out! I’ll be in touch soon.
-            </p>
-          )}
-        </div>
-      </form>
+        </form>
+      )}
     </section>
   );
 }
