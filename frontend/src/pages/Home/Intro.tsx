@@ -4,7 +4,7 @@ export default function Intro() {
   return (
     <section
       id="intro"
-      className="flex flex-col justify-center px-6 md:px-24 py-12 mt-12 max-w-7xl mx-auto bg-bg text-text font-body"
+      className="flex flex-col justify-center px-6 md:px-24 py-16 mt-12 max-w-7xl mx-auto bg-bg text-text font-body"
     >
       <span className="text-sm tracking-widest uppercase text-accent mb-2">
         Full-stack developer. Builder. Problem-solver.
