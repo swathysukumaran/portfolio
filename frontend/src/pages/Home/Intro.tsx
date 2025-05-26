@@ -11,7 +11,7 @@ export default function Intro() {
       </span>
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10">
-        <div className="flex-1">
+        <div className="flex-[3]">
           <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight tracking-tight text-primary">
             Hi, I’m Swathy.
           </h1>
@@ -32,7 +32,7 @@ export default function Intro() {
           </a>
         </div>
 
-        <div className="flex-1 flex justify-center">
+        <div className="flex-[2] flex justify-center">
           <img
             src={profilePic}
             alt="Swathy"
