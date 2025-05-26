@@ -73,6 +73,14 @@ export default function Projects() {
                     Live Site
                   </a>
                 )}
+                {project.link && (
+                  <a
+                    href={project.caseStudyPath}
+                    className="text-sm px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-white transition"
+                  >
+                    Case Study
+                  </a>
+                )}
               </div>
             </div>
           </div>
