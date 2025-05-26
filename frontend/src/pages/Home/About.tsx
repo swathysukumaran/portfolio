@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-bg text-text px-6 md:px-24 py-20 max-w-7xl mx-auto"
+      className="bg-bg text-zinc-700 px-6 md:px-24 py-20 max-w-7xl mx-auto"
     >
       <SectionTitle title="About Me" />
 
