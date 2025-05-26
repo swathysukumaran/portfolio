@@ -1,5 +1,5 @@
 import { useState } from "react";
-import swathyLogo from "../../assets/swathy-logo.png";
+import swathyLogo from "../assets/swathy-logo.png";
 const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
