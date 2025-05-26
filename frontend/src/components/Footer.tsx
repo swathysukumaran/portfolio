@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#f3f3f3] text-text text-sm border-t border-zinc-800 mt-24 font-body">
+    <footer className="bg-bg text-text text-sm border-t border-zinc-800 mt-24 font-body">
       <div className="max-w-7xl mx-auto px-6 py-10 text-center space-y-3">
         {/* Logo or Name */}
         <p className="text-base font-medium text-primary font-heading">
