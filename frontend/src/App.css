@@ -14,11 +14,36 @@
   --color-button: #1a73e8;
   /* call-to-action button */
 }
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+
+:root {
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --color-primary: oklch(67.63% 0.18 145.7);
+    /* #3C8453 */
+    --color-accent: oklch(80.47% 0.18 80.3);
+    /* #F3B045 */
+    --color-bg: oklch(97.4% 0.009 100);
+    /* #F5F5F4 */
+    --color-text: oklch(20.5% 0.01 240);
+    /* #1F1F1F */
+  
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
-html {
-  scroll-behavior: smooth;
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+.dark {
+  --color-bg: #1a1a1a;
+  --color-text: #f1f1f1;
+  --color-primary: #58b47c;
 }
