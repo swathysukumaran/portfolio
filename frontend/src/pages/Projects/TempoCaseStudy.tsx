@@ -39,7 +39,7 @@ export default function TempoCaseStudy() {
       {/* Screenshots */}
       <section className="mb-12 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-4">
-          📸 Screenshots
+          Screenshots
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <img
@@ -78,7 +78,7 @@ export default function TempoCaseStudy() {
       {/* From Forms to Freedom */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🧠 From Forms to Freedom
+          From Forms to Freedom
         </h2>
         <p>
           Tempo always used AI — but in the beginning, I was only scratching the
@@ -124,7 +124,7 @@ export default function TempoCaseStudy() {
       {/* What Tempo Can Do */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          ✨ What Tempo Can Do
+          What Tempo Can Do
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
@@ -151,7 +151,7 @@ export default function TempoCaseStudy() {
       {/* Challenges */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🧩 Major Challenges (and What I Learned)
+          Major Challenges (and What I Learned)
         </h2>
         <h3 className="font-semibold mt-4">🤖 Inconsistent AI Responses</h3>
         <p>
@@ -189,7 +189,7 @@ export default function TempoCaseStudy() {
       {/* Learnings */}
       <section className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🌱 What I Learned
+          What I Learned
         </h2>
         <p>Tempo taught me a lot more than how to build a full-stack app.</p>
         <ul className="list-disc list-inside pl-5 mb-2">

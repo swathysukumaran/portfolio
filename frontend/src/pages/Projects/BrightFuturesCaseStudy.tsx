@@ -52,7 +52,7 @@ export default function BrightFuturesCaseStudy() {
       {/* Project Timeline and Goals */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🗕 Development Timeline & Focus
+          Development Timeline & Focus
         </h2>
         <p className="mb-4">
           The academic timeline gave me only a few weeks to translate the client
@@ -69,7 +69,7 @@ export default function BrightFuturesCaseStudy() {
       {/* What I Built */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          💪 What I Built
+          What I Built
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>Frontend built in React using Tailwind and shadcn/ui</li>
@@ -87,7 +87,7 @@ export default function BrightFuturesCaseStudy() {
       {/* Challenges and Learning */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🔍 Key Learning and Challenges
+          Key Learning and Challenges
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
@@ -107,7 +107,7 @@ export default function BrightFuturesCaseStudy() {
       {/* Personal Reflection */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          ✨ Personal Reflection
+          Personal Reflection
         </h2>
         <p>
           This project helped me grow beyond just implementing features. I had

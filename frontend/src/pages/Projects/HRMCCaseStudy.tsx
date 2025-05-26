@@ -43,7 +43,7 @@ export default function HRMCCaseStudy() {
       {/* Features */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          🛠️ Features Being Built
+          Features Being Built
         </h2>
 
         <h3 className="font-semibold mt-4">✅ Member Management</h3>
@@ -82,9 +82,7 @@ export default function HRMCCaseStudy() {
       </section>
 
       <section className="mb-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          👩‍💻 My Role
-        </h2>
+        <h2 className="text-2xl font-semibold text-tertiary mb-2">My Role</h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
             Planning and designing the full data schema and dashboard layout
@@ -108,7 +106,7 @@ export default function HRMCCaseStudy() {
       {/* Next Steps */}
       <section className="mb-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          📌 Next Steps
+          Next Steps
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
@@ -121,19 +119,6 @@ export default function HRMCCaseStudy() {
           </li>
           <li>Optimize UI for mobile and tablet view</li>
         </ul>
-      </section>
-
-      {/* Why It Matters */}
-      <section className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-tertiary mb-2">
-          💡 Why This Project Matters
-        </h2>
-        <p>
-          This app solves a real administrative problem for a local community
-          club — going from spreadsheets and WhatsApp to a proper digital
-          system. It’s also helping me sharpen my backend logic, CRUD patterns,
-          and admin dashboard design skills with real users in mind.
-        </p>
       </section>
     </div>
   );
