@@ -19,7 +19,7 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* Overview */}
-      <section className="mt-20 mx-auto space-y-10 font-body max-w-3xl">
+      <section className="mt-20 mx-auto space-y-10 font-body ">
         {/* Problem & Inspiration */}
         <div className="space-y-4">
           <h2 className="text-xl font-heading font-semibold text-primary">
