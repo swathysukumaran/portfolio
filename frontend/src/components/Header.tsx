@@ -12,7 +12,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md  transition-all">
+    <header className="fixed top-0 w-full z-50 backdrop-blur-md  transition-all">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="/#intro">
