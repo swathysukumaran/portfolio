@@ -16,18 +16,16 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[var(--color-bg)] text-[var(--color-text)] px-6 md:px-24 py-24 max-w-7xl mx-auto"
+      className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto"
     >
       <SectionTitle title="About Me" />
 
-      <div className="mt-12 text-base md:text-lg leading-relaxed space-y-6 max-w-4xl mx-auto">
+      <div className="mt-12 text-base md:text-lg leading-relaxed space-y-6 max-w-4xl mx-auto font-body">
         <p>
           I’m someone who finds joy in making things work — especially when they
           don’t at first. I enjoy the quiet thrill of solving bugs, learning new
           tools, and that moment when hours of stuckness suddenly turns into{" "}
-          <span className="text-[var(--color-primary)] font-medium">
-            “it’s working!!!”
-          </span>
+          <span className="text-primary font-medium">“it’s working!!!”</span>
         </p>
 
         <p>
@@ -41,16 +39,15 @@ export default function About() {
           kindness, and curiosity — and I try to bring that into my work.
         </p>
 
-        {/* Tech Stack */}
         <div>
-          <h3 className="text-xl font-semibold text-[var(--color-primary)] mb-4">
+          <h3 className="text-xl font-semibold text-primary mb-4 font-heading">
             Tech Stack
           </h3>
           <ul className="flex flex-wrap gap-3 text-sm font-medium">
             {skills.map((skill) => (
               <li
                 key={skill}
-                className="bg-[var(--color-accent)] text-[var(--color-text)] px-4 py-1 rounded-full shadow-sm"
+                className="bg-accent text-text px-4 py-1 rounded-full shadow-sm"
               >
                 {skill}
               </li>
