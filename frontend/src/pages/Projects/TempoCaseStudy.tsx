@@ -19,68 +19,130 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* Overview */}
-      <section className="mt-20 mx-auto space-y-6 font-body">
-        <p>
-          Tempo started as a simple idea: what if travel planning was
-          personalized through AI — not just by location or dates, but by mood,
-          purpose, and context? I wanted users to describe their trip the way
-          they'd talk to a friend, and get back an itinerary that felt uniquely
-          theirs.
-        </p>
+      <section className="mt-20 mx-auto space-y-10 font-body max-w-3xl">
+        {/* Problem & Inspiration */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            🎯 Why I Built Tempo
+          </h2>
+          <p>
+            Tempo started as a simple idea: what if travel planning was
+            personalized through AI — not just by location or dates, but by
+            mood, purpose, and context?
+          </p>
+          <p>
+            I wanted users to describe their trip the way they'd talk to a
+            friend — and get back a plan that felt uniquely theirs.
+          </p>
+        </div>
 
-        <p>
-          I began with a multi-step form to collect preferences — destination,
-          duration, travel style. But I soon realized this rigid input was
-          limiting the core strength of the app: natural language flexibility. I
-          removed onboarding constraints and replaced fixed options with
-          open-ended input fields. This shift unlocked far more personalized
-          planning and reflected the actual power of generative AI.
-        </p>
+        {/* Early Approach & Pivot */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            🔁 From Forms to Freedom
+          </h2>
+          <p>
+            I initially built a multi-step form to collect preferences like
+            destination, duration, and travel style. But I quickly realized this
+            rigid input was limiting the real power of the app — natural
+            language flexibility.
+          </p>
+          <p>
+            I removed onboarding constraints and replaced fixed fields with
+            open-ended inputs. This shift unlocked highly personalized planning
+            that reflected the actual strength of generative AI.
+          </p>
+        </div>
 
-        <p>
-          Working with the Gemini API came with its own set of challenges.
-          Initially, responses came with extra text outside the JSON block —
-          sometimes even breaking mid-sentence or returning incomplete
-          structures. My early workaround was to manually strip out unwanted
-          text, but that quickly proved unreliable. I then restructured the
-          prompt to include a strict JSON schema definition, which stabilized
-          the output format and made parsing much more predictable. Still, I
-          learned to build defensively: LLMs don't always follow rules, so my
-          code had to.
-        </p>
+        {/* AI Prompting Challenges */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            🤖 Taming AI Inconsistencies
+          </h2>
+          <p>Working with the Gemini API introduced a set of challenges:</p>
+          <ul className="list-disc list-inside text-zinc-700 space-y-1">
+            <li>Extra text before/after the JSON output</li>
+            <li>Incomplete or broken responses mid-string</li>
+            <li>Inconsistent structure that broke the parser</li>
+          </ul>
+          <p>
+            I first tried stripping out unwanted text but that proved
+            unreliable. Eventually, I embedded a strict JSON schema into the
+            prompt — which helped stabilize the output and made parsing safer.
+          </p>
+          <p className="italic text-sm text-zinc-600">
+            Lesson learned: even the smartest LLM needs guardrails.
+          </p>
+        </div>
 
-        <p>
-          Voice input was another key feature. I evaluated both a lightweight
-          React speech library and Google Cloud Speech-to-Text. While the React
-          solution was easier to implement, I chose Google for its superior
-          accuracy and long-term potential — especially as I plan to support
-          multi-language voice prompts and translations in future iterations.
-        </p>
+        {/* Voice Input Decision */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            🎤 Choosing the Right Speech Tool
+          </h2>
+          <p>
+            I tested both a lightweight React speech library and Google Cloud
+            Speech-to-Text. While the React version was easy to use, its
+            accuracy was limited.
+          </p>
+          <p>
+            I chose Google’s API for its precision and future-proofing —
+            especially since I plan to add multilingual voice input and
+            translation support later.
+          </p>
+        </div>
 
-        <p>
-          Along the way, I faced another unexpected challenge: users didn’t
-          realize how much control they actually had. Most typed vague prompts
-          like “relaxing trip” or “family-friendly.” But Tempo can handle much
-          more nuanced input — like “plan an active holiday, but leave Day 2
-          free,” or “include a luxury dinner on the third night for a couple
-          with kids.” Helping users understand this is now a key UX goal for me
-          going forward.
-        </p>
+        {/* UX Insight */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            💡 Designing for User Imagination
+          </h2>
+          <p>
+            One unexpected challenge was helping users realize how much power
+            they had. Many typed generic prompts like “relaxing trip” — even
+            though Tempo could handle things like:
+          </p>
+          <ul className="list-disc list-inside text-zinc-700 space-y-1">
+            <li>"Leave Day 2 empty, I want to rest."</li>
+            <li>
+              "Include a candlelight dinner on Day 3 with a luxury hotel."
+            </li>
+            <li>"I’m traveling with my child, but want one solo evening."</li>
+          </ul>
+          <p>
+            Helping users tap into this level of personalization is now a UX
+            goal I plan to keep improving.
+          </p>
+        </div>
 
-        <p>
-          I also built a trip-sharing feature using SendGrid. Shared trip access
-          is protected through secure routes — only invited users can view or
-          modify those trips.
-        </p>
+        {/* Sharing & Security */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            🔐 Sharing Features & Access Control
+          </h2>
+          <p>
+            I added a trip sharing feature using SendGrid, allowing users to
+            send itineraries via email. These are protected through private
+            routes — only invited users can view or edit them.
+          </p>
+        </div>
 
-        <p>
-          Tempo isn’t just an AI wrapper. It’s a carefully designed environment
-          that gives users power, flexibility, and clarity. This project pushed
-          me to design smarter prompts, structure flexible data, and guide users
-          toward better experiences. It also deepened my understanding of how to
-          collaborate with unpredictable systems — like generative models —
-          while still building something consistent, useful, and human-centered.
-        </p>
+        {/* Final Reflection */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-heading font-semibold text-primary">
+            ✨ What I Learned
+          </h2>
+          <p>
+            Tempo isn't just an AI wrapper. It's a structured, human-first
+            environment designed to guide, not overwhelm. It pushed me to think
+            deeply about prompt design, flexible architecture, and guiding user
+            behavior in open-ended systems.
+          </p>
+          <p className="text-zinc-700 font-medium">
+            It’s my favorite kind of challenge: technical, creative, and
+            empathetic.
+          </p>
+        </div>
       </section>
 
       {/* Features + Images */}
