@@ -19,24 +19,67 @@ export default function TempoCaseStudy() {
       </section>
 
       {/* Overview */}
-      <section className="max-w-3xl mx-auto space-y-6">
+      <section className="mt-20 max-w-3xl mx-auto space-y-6 font-body">
         <p>
-          Tempo began with one simple idea: everyone travels differently — even
-          to the same place, on the same dates.
+          Tempo started as a simple idea: what if travel planning was
+          personalized through AI — not just by location or dates, but by mood,
+          purpose, and context? I wanted users to describe their trip the way
+          they'd talk to a friend, and get back an itinerary that felt uniquely
+          theirs.
         </p>
+
         <p>
-          Some people travel to relax. Others to explore. Some are with their
-          kids, some on solo adventures, and others are attending weddings or
-          work trips. The same city can mean totally different things depending
-          on who’s going and why.
+          I began with a multi-step form to collect preferences — destination,
+          duration, travel style. But I soon realized this rigid input was
+          limiting the core strength of the app: natural language flexibility. I
+          removed onboarding constraints and replaced fixed options with
+          open-ended input fields. This shift unlocked far more personalized
+          planning and reflected the actual power of generative AI.
         </p>
+
         <p>
-          This was the inspiration behind Tempo — my capstone project and first
-          experience working with Large Language Models (LLMs).
+          Working with the Gemini API came with its own set of challenges.
+          Initially, responses came with extra text outside the JSON block —
+          sometimes even breaking mid-sentence or returning incomplete
+          structures. My early workaround was to manually strip out unwanted
+          text, but that quickly proved unreliable. I then restructured the
+          prompt to include a strict JSON schema definition, which stabilized
+          the output format and made parsing much more predictable. Still, I
+          learned to build defensively: LLMs don't always follow rules, so my
+          code had to.
         </p>
+
         <p>
-          I wanted to create a tool that feels like a travel-savvy friend. You
-          just say what you want in natural language — and Tempo does the rest.
+          Voice input was another key feature. I evaluated both a lightweight
+          React speech library and Google Cloud Speech-to-Text. While the React
+          solution was easier to implement, I chose Google for its superior
+          accuracy and long-term potential — especially as I plan to support
+          multi-language voice prompts and translations in future iterations.
+        </p>
+
+        <p>
+          Along the way, I faced another unexpected challenge: users didn’t
+          realize how much control they actually had. Most typed vague prompts
+          like “relaxing trip” or “family-friendly.” But Tempo can handle much
+          more nuanced input — like “plan an active holiday, but leave Day 2
+          free,” or “include a luxury dinner on the third night for a couple
+          with kids.” Helping users understand this is now a key UX goal for me
+          going forward.
+        </p>
+
+        <p>
+          I also built a trip-sharing feature using SendGrid. Shared trip access
+          is protected through secure routes — only invited users can view or
+          modify those trips.
+        </p>
+
+        <p>
+          Tempo isn’t just an AI wrapper. It’s a carefully designed environment
+          that gives users power, flexibility, and clarity. This project pushed
+          me to design smarter prompts, structure flexible data, and guide users
+          toward better experiences. It also deepened my understanding of how to
+          collaborate with unpredictable systems — like generative models —
+          while still building something consistent, useful, and human-centered.
         </p>
       </section>
 
