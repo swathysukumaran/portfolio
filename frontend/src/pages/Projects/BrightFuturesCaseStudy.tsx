@@ -74,7 +74,7 @@ export default function BrightFuturesCaseStudy() {
 
 function CaseStudyBlock({ title, text }: { title: string; text: string }) {
   return (
-    <div className="space-y-3 max-w-3xl mx-auto">
+    <div className="space-y-3  mx-auto">
       <h2 className="text-xl font-heading font-semibold text-primary">
         {title}
       </h2>
