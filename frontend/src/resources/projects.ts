@@ -8,7 +8,7 @@ export const projects = [
     description:
       "A personalized travel planner powered by AI. Users can enter natural input to generate itineraries, edit them using voice, and share plans with others. Built with Google APIs and Gemini AI integration.",
     image: tempotrip,
-    link: "https://tempo-frontend-lov2.onrender.com",
+    // link: "https://tempo-frontend-lov2.onrender.com",
     repo: "https://github.com/swathysukumaran/tempo", 
     caseStudyPath: "/projects/tempo",
   },

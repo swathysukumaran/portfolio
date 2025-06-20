@@ -22,6 +22,7 @@ export default function TempoCaseStudy() {
       <section className="mt-20 mx-auto space-y-10 font-body ">
         {/* Problem & Inspiration */}
         <div className="space-y-4">
+          <p className="text-lg text-red">Demo available on request. </p>
           <h2 className="text-xl font-heading font-semibold text-primary">
             🎯 Why I Built Tempo
           </h2>
