@@ -24,9 +24,10 @@ router.post("/", async (req, res) => {
   try {
     await sgMail.send({
       to: "swathysukumaran@gmail.com",
-      from: "swathysukumaran@gmail.com",
+      from: "ssukumaranvadakkath@northislandcollege.ca",
+      replyTo: email,
       subject: `Portfolio message from ${name}`,
-      text: `From: ${name}\nEmail: ${email}\n\n${message}`,
+      text: `You have a new message from your portfolio.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
     res.status(200).json({ success: true, saved: dbSaved });
   } catch (err) {
