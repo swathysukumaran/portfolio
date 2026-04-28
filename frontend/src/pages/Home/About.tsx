@@ -30,20 +30,20 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <p>
-            I'm someone who finds joy in making things work — especially when
+            I'm someone who finds joy in making things work, especially when
             they don't at first. I enjoy the quiet thrill of solving bugs,
             learning new tools, and that moment when hours of stuckness suddenly
             turns into{" "}
             <span className="text-accent font-medium">"it's working!!!"</span>
           </p>
           <p>
-            Good software, to me, isn't just about code — it's about real people
+            Good software, to me, isn't just about code. It's about real people
             being able to use it comfortably. I care about building things that
             feel smooth, clear, and helpful.
           </p>
           <p>
             Outside of coding, I'm a mom and a lifelong reader. I value calm,
-            kindness, and curiosity — and I try to bring all three into my work.
+            kindness, and curiosity, and I try to bring all three into my work.
           </p>
         </motion.div>
 

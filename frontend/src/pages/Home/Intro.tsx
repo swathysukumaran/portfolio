@@ -34,33 +34,36 @@ export default function Intro() {
           {/* Text */}
           <div className="flex-1 min-w-0">
             <motion.p
-              className="text-muted text-sm tracking-widest uppercase mb-3 font-body"
+              className="text-muted text-sm tracking-widest uppercase mb-4 font-body"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Hi, I'm
+              Full-Stack Developer
             </motion.p>
 
             <motion.h1
-              className="text-5xl md:text-7xl font-heading font-bold leading-tight"
+              className="text-5xl md:text-7xl font-heading font-bold leading-[1.05] tracking-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Swathy
+              I build things
               <br />
-              <span className="text-accent">Sukumaran</span>
+              <span className="text-accent">people love</span>
+              <br />
+              to use.
             </motion.h1>
 
             <motion.p
-              className="mt-4 text-base md:text-lg text-muted max-w-lg leading-relaxed font-body"
+              className="mt-6 text-base md:text-lg text-muted max-w-md leading-relaxed font-body"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.5 }}
             >
-              Full-stack developer. I build thoughtful, human-centered web
-              applications — blending clean code with real empathy for users.
+              Hi, I'm <span className="text-text font-medium">Swathy</span>, a
+              full-stack developer who cares as much about the person using the
+              app as the code powering it.
             </motion.p>
 
             <motion.div
@@ -73,13 +76,13 @@ export default function Intro() {
                 href="#projects"
                 className="px-6 py-3 bg-accent text-bg rounded-full font-medium text-sm hover:bg-accent/90 transition font-body"
               >
-                View My Work
+                See My Work
               </a>
               <a
                 href="#contact"
                 className="px-6 py-3 border border-border text-text rounded-full font-medium text-sm hover:border-accent hover:text-accent transition font-body"
               >
-                Get in Touch
+                Let's Talk
               </a>
             </motion.div>
           </div>
