@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import TempoCaseStudy from "./pages/Projects/TempoCaseStudy";
 import BrightFuturesCaseStudy from "./pages/Projects/BrightFuturesCaseStudy";
 import HRMCCaseStudy from "./pages/Projects/HRMCCaseStudy";
-import Layout from "./components/Layout"; // ⬅️ adjust path if needed
+import AdminPage from "./pages/Admin";
+import Layout from "./components/Layout";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             </Layout>
           }
         />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );
