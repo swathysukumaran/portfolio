@@ -1,33 +1,44 @@
+import { motion } from "framer-motion";
 import SectionTitle from "../../components/SectionTitle";
 import { experiences } from "../../resources/experiences";
 
 export default function Experiences() {
   return (
-    <section
-      id="experience"
-      className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto"
-    >
+    <section id="experience" className="px-6 md:px-16 py-28 max-w-6xl mx-auto">
       <SectionTitle title="Experience" />
 
-      <div className="mt-16 space-y-10">
+      <div className="relative ml-2 md:ml-4 pl-8 md:pl-12 border-l border-border space-y-10">
         {experiences.map((exp, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white border border-primary shadow-sm rounded-xl p-6 space-y-2 max-w-4xl mx-auto"
+            className="relative"
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="flex justify-between flex-wrap gap-2 items-center">
-              <h3 className="text-xl font-semibold text-primary font-heading">
-                {exp.role}
-              </h3>
-              <span className="text-sm italic text-gray-500">{exp.period}</span>
+            {/* Timeline dot */}
+            <div className="absolute -left-[37px] md:-left-[49px] top-6 w-3 h-3 rounded-full bg-accent ring-4 ring-bg" />
+
+            <div className="bg-surface border border-border rounded-xl p-6 hover:border-accent/30 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+                <div>
+                  <h3 className="text-base font-semibold font-heading text-text">
+                    {exp.role}
+                  </h3>
+                  <p className="text-accent text-sm mt-0.5 font-body">{exp.company}</p>
+                </div>
+                <span className="text-muted text-xs italic shrink-0 mt-1 font-body">
+                  {exp.period}
+                </span>
+              </div>
+              {exp.description && (
+                <p className="text-muted text-sm leading-relaxed font-body">
+                  {exp.description}
+                </p>
+              )}
             </div>
-            <p className="text-lg font-medium font-heading">{exp.company}</p>
-            {exp.description && (
-              <p className="text-base leading-relaxed mt-2 text-zinc-700 font-body">
-                {exp.description}
-              </p>
-            )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

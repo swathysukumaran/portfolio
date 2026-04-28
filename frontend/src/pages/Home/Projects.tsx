@@ -1,64 +1,75 @@
+import { motion } from "framer-motion";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="bg-bg text-text px-6 md:px-24 py-24 max-w-7xl mx-auto"
-    >
+    <section id="projects" className="px-6 md:px-16 py-28 max-w-6xl mx-auto">
       <SectionTitle title="Projects" />
 
-      <div className="mt-16 grid gap-5 md:grid-cols-2">
+      <div className="grid md:grid-cols-2 gap-5">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="relative bg-white border border-primary rounded-xl shadow-sm hover:shadow-md transition overflow-hidden flex flex-col"
+            className="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col hover:border-accent/30 transition-colors duration-300"
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            {/* 🚧 Badge */}
+            {/* In-progress badge */}
             {project.inProgress && (
-              <div className="absolute top-4 right-4 z-10 bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full">
-                Currently working on
+              <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-body">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                In Progress
               </div>
             )}
 
-            {/* 🖼️ Image */}
+            {/* Image */}
             {project.image && (
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-52 object-contain bg-zinc-100"
-              />
+              <div className="h-48 overflow-hidden bg-border/40">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             )}
 
-            {/* 📄 Content */}
-            <div className="p-6 flex flex-col gap-4 flex-grow">
+            {/* Content */}
+            <div className="p-6 flex flex-col gap-4 flex-1">
               <div>
-                <h3 className="text-xl font-semibold text-primary font-heading">
+                <h3 className="text-base font-semibold font-heading text-text">
                   {project.name}
                 </h3>
-
                 {project.tech && Array.isArray(project.tech) && (
-                  <p className="text-sm italic text-zinc-500 mt-1 font-body">
-                    Built with: {project.tech.join(", ")}
-                  </p>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="text-[11px] px-2 py-0.5 rounded bg-border text-muted font-body"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 )}
               </div>
 
               {project.description && (
-                <p className="text-sm text-zinc-700 font-body leading-relaxed">
+                <p className="text-sm text-muted leading-relaxed font-body flex-1">
                   {project.description}
                 </p>
               )}
 
-              {/* 🔗 Links */}
-              <div className="mt-auto flex gap-4 text-sm font-medium">
+              {/* Links */}
+              <div className="flex flex-wrap gap-2 mt-auto pt-2">
                 {project.repo && (
                   <a
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-primary text-white rounded-full hover:brightness-110 transition"
+                    className="px-4 py-1.5 rounded-full border border-border text-muted hover:border-accent hover:text-accent transition text-xs font-medium font-body"
                   >
                     GitHub
                   </a>
@@ -68,7 +79,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-accent text-text rounded-full hover:brightness-110 transition"
+                    className="px-4 py-1.5 rounded-full bg-accent text-bg hover:bg-accent/90 transition text-xs font-medium font-body"
                   >
                     Live Site
                   </a>
@@ -76,14 +87,14 @@ export default function Projects() {
                 {project.caseStudyPath && (
                   <a
                     href={project.caseStudyPath}
-                    className="text-sm px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-white transition"
+                    className="px-4 py-1.5 rounded-full border border-accent/40 text-accent hover:bg-accent hover:text-bg transition text-xs font-medium font-body"
                   >
-                    Case Study
+                    Case Study →
                   </a>
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

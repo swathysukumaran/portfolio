@@ -1,48 +1,35 @@
 export default function Footer() {
   return (
-    <footer className="bg-bg text-text text-sm border-t border-zinc-800 mt-24 font-body">
-      <div className="max-w-7xl mx-auto px-6 py-10 text-center space-y-3">
-        {/* Logo or Name */}
-        <p className="text-base font-medium text-primary font-heading">
-          Designed & built by Swathy Sukumaran
-        </p>
+    <footer className="border-t border-border mt-16">
+      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+        <p className="font-heading font-semibold text-text">Swathy Sukumaran</p>
 
-        {/* Email */}
-        <p>
-          <a
-            href="mailto:swathysukumaran@gmail.com"
-            className="text-accent hover:underline transition"
-          >
-            swathysukumaran@gmail.com
-          </a>
-        </p>
-
-        {/* Phone  */}
-        <p className="text-zinc-400">+1 236 777 0562</p>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-4 pt-2 text-sm">
+        <div className="flex items-center gap-6">
           <a
             href="https://github.com/swathysukumaran"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-accent transition"
+            className="hover:text-accent transition"
           >
             GitHub
           </a>
-          <span className="text-zinc-500">•</span>
           <a
             href="https://linkedin.com/in/swathy-sukumaran-v-1190b7233"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-accent transition"
+            className="hover:text-accent transition"
           >
             LinkedIn
           </a>
+          <a
+            href="mailto:swathysukumaran@gmail.com"
+            className="hover:text-accent transition"
+          >
+            Email
+          </a>
         </div>
 
-        {/* Year */}
-        <p className="text-xs text-zinc-600 pt-3">
+        <p className="text-xs text-muted/60">
           © {new Date().getFullYear()} Swathy Sukumaran Vadakkath
         </p>
       </div>

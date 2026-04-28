@@ -1,14 +1,11 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import SectionTitle from "../../components/SectionTitle";
 
-function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,7 +15,7 @@ function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const res = await fetch(
         "https://portfolio-backend-xx0a.onrender.com/api/contact",
@@ -28,91 +25,99 @@ function Contact() {
           body: JSON.stringify(formData),
         }
       );
-
       if (res.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
-      } else {
-        console.error("Failed to send message");
       }
     } catch (err) {
-      console.error("Error sending message:", err);
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
+  const inputClass =
+    "w-full bg-surface border border-border rounded-lg px-4 py-3 text-text text-sm font-body focus:outline-none focus:border-accent transition-colors duration-200 placeholder:text-muted/50";
+
   return (
-    <section
-      id="contact"
-      className="bg-bg text-text px-6 md:px-24 py-24 max-w-3xl mx-auto"
-    >
-      <SectionTitle title="Say Hello" />
+    <section id="contact" className="px-6 md:px-16 py-28 max-w-2xl mx-auto">
+      <SectionTitle title="Get In Touch" />
 
-      <p className="text-base leading-relaxed mt-6 font-body">
-        If you’d like to work together, have a question, or just want to say hi
-        — I’d love to hear from you.
-      </p>
-
-      {submitted ? (
-        <p className="mt-8 text-green-600 font-medium">
-          ✅ Your message has been sent successfully!
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="text-muted leading-relaxed mb-10 font-body">
+          Have a project in mind, want to collaborate, or just want to say hi?
+          My inbox is always open.
         </p>
-      ) : (
-        <form onSubmit={handleSubmit} className="mt-10 space-y-6 font-body">
-          <div>
-            <label htmlFor="name" className="block mb-2 font-medium">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
 
-          <div>
-            <label htmlFor="email" className="block mb-2 font-medium">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
-            />
+        {submitted ? (
+          <div className="flex items-center gap-3 text-accent font-body">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>Message sent! I'll get back to you soon.</p>
           </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="space-y-1.5">
+              <label htmlFor="name" className="text-xs text-muted uppercase tracking-wider font-body">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className={inputClass}
+              />
+            </div>
 
-          <div>
-            <label htmlFor="message" className="block mb-2 font-medium">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full p-3 rounded-md border border-primary bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
+            <div className="space-y-1.5">
+              <label htmlFor="email" className="text-xs text-muted uppercase tracking-wider font-body">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className={inputClass}
+              />
+            </div>
 
-          <button
-            type="submit"
-            className="px-6 py-3 bg-primary text-white rounded-full font-medium hover:brightness-110 transition"
-          >
-            Send Message
-          </button>
-        </form>
-      )}
+            <div className="space-y-1.5">
+              <label htmlFor="message" className="text-xs text-muted uppercase tracking-wider font-body">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                value={formData.message}
+                onChange={handleChange}
+                className={`${inputClass} resize-none`}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 bg-accent text-bg rounded-lg font-medium text-sm hover:bg-accent/90 transition disabled:opacity-50 font-body"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        )}
+      </motion.div>
     </section>
   );
 }
-
-export default Contact;
