@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import SectionTitle from "../../components/SectionTitle";
 import { fetchProjects, type Project } from "../../lib/api";
 import { imageMap } from "../../lib/images";
+import { fallbackProjects } from "../../resources/projects";
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchProjects()
       .then(setProjects)
-      .catch(() => setError("Could not load projects."))
+      .catch(() => setProjects(fallbackProjects))
       .finally(() => setLoading(false));
   }, []);
 
@@ -31,9 +31,7 @@ export default function Projects() {
         </div>
       )}
 
-      {error && <p className="text-muted text-sm">{error}</p>}
-
-      {!loading && !error && (
+      {!loading && (
         <div className="grid md:grid-cols-2 gap-5">
           {projects.map((project, index) => (
             <motion.div

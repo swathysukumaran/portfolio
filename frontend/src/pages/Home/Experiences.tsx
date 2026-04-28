@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "../../components/SectionTitle";
 import { fetchExperiences, type Experience } from "../../lib/api";
+import { fallbackExperiences } from "../../resources/experiences";
 
 export default function Experiences() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchExperiences()
       .then(setExperiences)
-      .catch(() => setError("Could not load experience data."))
+      .catch(() => setExperiences(fallbackExperiences))
       .finally(() => setLoading(false));
   }, []);
 
@@ -30,9 +30,7 @@ export default function Experiences() {
         </div>
       )}
 
-      {error && <p className="text-muted text-sm">{error}</p>}
-
-      {!loading && !error && (
+      {!loading && (
         <div className="relative ml-2 md:ml-4 pl-8 md:pl-12 border-l border-border space-y-10">
           {experiences.map((exp, index) => (
             <motion.div
