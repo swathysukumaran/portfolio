@@ -12,15 +12,14 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  let dbSaved = false;
-
+  // Save to DB (non-blocking — don't fail the request if this errors)
   try {
     await Message.create({ name, email, message });
-    dbSaved = true;
   } catch (err) {
     console.error("DB save error:", err.message);
   }
 
+  // Send email — this must succeed for the user to see "sent"
   try {
     await sgMail.send({
       to: "swathysukumaran@gmail.com",
@@ -29,14 +28,11 @@ router.post("/", async (req, res) => {
       subject: `Portfolio message from ${name}`,
       text: `You have a new message from your portfolio.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
-    res.status(200).json({ success: true, saved: dbSaved });
+    res.status(200).json({ success: true });
   } catch (err) {
-    console.error("SendGrid error:", err.response?.body || err.message);
-    if (dbSaved) {
-      res.status(200).json({ success: true, saved: true });
-    } else {
-      res.status(500).json({ error: "Failed to send message" });
-    }
+    const detail = err.response?.body?.errors?.[0]?.message || err.message;
+    console.error("SendGrid error:", detail);
+    res.status(500).json({ error: "Failed to send email", detail });
   }
 });
 
