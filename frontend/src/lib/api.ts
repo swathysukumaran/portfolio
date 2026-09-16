@@ -48,7 +48,7 @@ export async function submitContact(data: {
   email: string;
   message: string;
 }): Promise<void> {
-  const res = await fetch(`${BASE_URL}/api/contact`, {
+  const res = await fetch("https://formspree.io/f/xrpbgzpb", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
