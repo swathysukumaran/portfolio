@@ -62,6 +62,15 @@ export default function Experiences() {
                     {exp.description}
                   </p>
                 )}
+                {exp.bullets && exp.bullets.length > 0 && (
+                  <ul className="mt-2 space-y-1.5 list-disc list-outside pl-4">
+                    {exp.bullets.map((b, i) => (
+                      <li key={i} className="text-muted text-sm leading-relaxed font-body">
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </motion.div>
           ))}
